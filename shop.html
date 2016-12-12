@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Автосервис "Авторитет"</title>
+
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js" type="text/javascript"></script>
+  <script src="http://code.jquery.com/jquery-1.11.0.min.js" type="text/javascript" ></script>
+
+
+  <script src="js/animation.js"></script>
+
+  <script src="js/jqueryVisible.js"></script>
+
+  <script src="js/jquery.animate-shadow-min.js"></script>
+ <script src="js/wicart.js"  type="text/javascript" ></script>
+
+
+
+
+
+
+
+  <!-- Bootstrap -->
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Poiret+One" rel="stylesheet"><link href="https://fonts.googleapis.com/css?family=Play" rel="stylesheet">
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]> <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script> <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script> <![endif]-->
+  <script src="js/imageScript.js"></script>
+
+  <script src="//cdn.jsdelivr.net/jquery.shadow-animation/1/mainfile"></script>
+</head>
+<body>
+   <script>
+var cart;
+var config;
+var wiNumInputPrefID;
+$(document).ready(function(){
+cart = new WICard("cart");
+cart.init("basketwidjet", config);
+});
+document.addEventListener('visibilitychange', function(e) {cart.init("basketwidjet", config);}, false);
+</script>
+  <script>
+var priceList = {
+   "001" : {"id" : "001", "subid" : {}, "name" : "Cordiant Road Runner 175/65", "price" : "1900"},
+  "002" : {"id" : "002", "subid" : {}, "name" : "Goodyear Wrangler 185/65", "price" : "3600"},
+  "003" : {"id" : "003", "subid" : {}, "name" : "Pirelli Cinturato 195/55", "price" : "2490"},
+  "004" : {"id" : "004", "subid" : {}, "name" : "Michelin Energy 185/60", "price" : "2800"},
+  "005" : {"id" : "005", "subid" : {}, "name" : "Michelin X-Ice 205/55", "price" : "5500"},
+  "006" : {"id" : "006", "subid" : {}, "name" : "Pirelli WINTER ICE ZERO 185/55", "price" : "4700"},
+  "007" : {"id" : "007", "subid" : {}, "name" : "Hankook i*pike RW11 265/60", "price" : "7100"},
+  "008" : {"id" : "008", "subid" : {}, "name" : "Bridgestone Ice Cruiser 7000 225/65", "price" : "6250"},
+  "009" : {"id" : "009", "subid" : {}, "name" : "Shell Helix HX8", "price" : "2050"},
+  "010" : {"id" : "010", "subid" : {}, "name" : "Castrol Edge 5W-30", "price" : "2100"},
+  "011" : {"id" : "011", "subid" : {}, "name" : "Лукойл Стандарт 10W-40", "price" : "1950"},
+  "012" : {"id" : "012", "subid" : {}, "name" : "Mobil 1 OW-40", "price" : "2410"}
+  };
+</script>
+      <header>
+  
+<nav class="navbar navbar-default menu">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#"><img src="images/brand1.png" alt="Авторитет"></a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+            <li><a href="index.html">главная </a></li>
+            <li class="active-link"><a href="shop.html">Магазин</a></li>
+            <li><a href="#">о нас</a></li>
+            <li><a href="#">контакты</a></li>
+            <div class="corz">
+<div>
+<span>Корзина: </span>
+
+<li><a href="#" id="basketwidjet" onclick="cart.showWinow('bcontainer', 1)"></a></li>
+<li><a href="#" onclick="cart.clearBasket()" style="float: right;">Очистить</a></li>
+</div>
+</div>
+      </ul>
+      
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav> 
+</header>
+ 
+<div class="content">
+    <div class="container">
+
+<h1>Магазин</h1>
+
+<div class="shiny">
+   <h2>Летняя резина</h2>
+    <div class="row">
+      <div class="shop-row clearfix">
+        <div class="col-md-3">
+          <div class="shop">
+            <h3>Cordiant Road Runner 175/65</h3>
+            <img src="images/cordiant.jpg">
+            <p>Новая покрышка от Cordiant в первую очередь предназначена для среднего автосегмента, где находятся машины стоимостью до одного миллиона рублей.
+   Недорогая резина, тем не менее, способна выдерживать нагрузки при скорости 210 километров в час.</p>
+  <h4 class="prr">Цена:</h4> <span class="wicartprice" id="wicartprice_001">1900</span> Руб.
+   <button id="wicartbutton_001" onclick="cart.addToCart(this, '001', priceList['001'])">Купить</button>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="shop">
+            <h3>Goodyear Wrangler 185/65</h3>
+            <img src="images/goodyear.jpg">
+            <p>Идеальная покрышка для фанатов бездорожья и тех, кто не хочет выжать максимум из полного привода во время съездов с асфальта.Шина не боится сугробов и глубокой грязи. Новая резиносмесь улучшает стойкость к износу и различным повреждениям.</p>
+            <h4 class="prr">Цена:</h4> <span class="wicartprice" id="wicartprice_002">3600</span> Руб.
+            <button id="wicartbutton_002" onclick="cart.addToCart(this, '002', priceList['002'])">Купить</button>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="shop">
+            <h3>Pirelli Cinturato 5000 195/55</h3>
+            <img src="images/pirelli.jpg">
+            <p>Экологичные шины. Покрышки отличаются безопасностью и эксплуатационной гибкостью. Инновационная резиновая смесь и дизайн протектора наделили шины хорошей износостойкостью, превосходными  цепными характеристиками и сниженным сопротивлением качению. </p>
+            <h4 class="prr">Цена:</h4> <span class="wicartprice" id="wicartprice_003">2490</span> Руб.
+            <button id="wicartbutton_003" onclick="cart.addToCart(this, '003', priceList['003'])">Купить</button>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="shop">
+            <h3>Michelin Energy Drive 185/60</h3>
+            <img src="images/michelin.jpg">
+            <p> Шины с увеличенным сроком службы. Также они помогают значительно сократить затраты на топливо. Но главное достоинство данной модели безопасность: сокращенный тормозной путь и великолепное сцепление.</p>
+            <h4 class="prr">Цена:</h4> <span class="wicartprice" id="wicartprice_004">2800</span> Руб.
+            <button id="wicartbutton_004" onclick="cart.addToCart(this, '004', priceList['004'])">Купить</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="rez">
+      <h2>Зимняя резина</h2>
+    <div class="row">
+      <div class="shop-row clearfix">
+        <div class="col-md-3">
+          <div class="shop">
+            <h3>Michelin Winter X-Ice 205/55</h3>
+            <img src="images/michelin-z.jpg">
+            <p>Секрет популярности данной модели – уникальный состав резиновой смеси FLEX-ICE. Она позволяет шине сохранять эластичность даже в самый лютый мороз, обеспечивая отличным сцеплением.  Кроме того, смесь увеличила износоустойчивость резины и снизила  сопротивление качению. Поэтому шина способствует экономию топлива. </p>
+            <h4 class="prr">Цена:</h4> <span class="wicartprice" id="wicartprice_005">5500</span> Руб.
+            <button id="wicartbutton_005" onclick="cart.addToCart(this, '005', priceList['005'])">Купить</button>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="shop">
+            <h3>Pirelli WINTER ICE ZERO 185/55</h3>
+            <img src="images/pirelli-z.png">
+            <p>Прогрессивные, надежные шины Pirelli WINTER ICE ZERO созданы посредством использования современных, многокомпозитных материалов. Они способны переносить экстремальные нагрузки, позволяя водителю сохранять контроль над автомобилем в любой, даже самой сложной ситуации.  </p>
+            <h4 class="prr">Цена:</h4> <span class="wicartprice" id="wicartprice_006">4700</span> Руб.
+            <button id="wicartbutton_006" onclick="cart.addToCart(this, '006', priceList['006'])">Купить</button>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="shop">
+            <h3>Hankook i*pike RW11 265/60</h3>
+            <img src="images/hankook-z.jpg">
+            <p>Зимняя резина обладает V-образным рисунком протектора. В центральной зоне имеется продольное ребро, максимальная жесткость которого демонстрирует быструю реакцию руля во время маневров и поворотов, а также великолепную курсовую устойчивость при езде по зимней дороге.
+            <h4 class="prr">Цена:</h4> <span class="wicartprice" id="wicartprice_007">7100</span> Руб.
+            <button id="wicartbutton_007" onclick="cart.addToCart(this, '007', priceList['007'])">Купить</button>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="shop">
+            <h3>Bridgestone Ice Cruiser 7000 225/65</h3>
+            <img src="images/bridge-z.jpg">
+            <p>Шины разработаны инженерами с учетом зимних погодных условий нашей страны. Как заявляет команда «Bridgestone», автомобили на зимней резине Ice Cruiser 7000 тормозят на обледенелой дороге на 8% лучше, чем на покрышках предыдущих моделей.</p>
+            <h4 class="prr">Цена:</h4> <span class="wicartprice" id="wicartprice_008">6250</span> Руб.
+            <button id="wicartbutton_008" onclick="cart.addToCart(this, '008', priceList['008'])">Купить</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+    <div class="maslo">
+      <h2>Моторные масла</h2>
+    <div class="row">
+      <div class="shop-row clearfix">
+        <div class="col-md-3">
+          <div class="shop">
+            <h3>Shell Helix HX8 4л.</h3>
+            <img src="images/shell.jpg">
+            <p>Моторное масло Shell HX8 5w40 разработано для бензиновых и дизельных двигателей, включая новейшие конструкции, а также автомобилей с новой топливной системой FFV на бензино-этанольной смеси. Демонстрирует отличные эксплуатационные качества даже при вождении в жестких климатических и дорожных условиях. </p>
+            <h4 class="prr">Цена:</h4> <span class="wicartprice" id="wicartprice_009">2050</span> Руб.
+            <button id="wicartbutton_009" onclick="cart.addToCart(this, '009', priceList['009'])">Купить</button>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="shop">
+            <h3>Castrol Edge 5W-30 4л.</h3>
+            <img src="images/castrol.jpg">
+            <p>Особая разработка Fluid Strength Technology гарантированно предохраняет двигатель от возникновения коррозии и внешних поломок. Способности протекции проявляются в итоге полного цикла работы двигателя, что пролонгирует его рабочие свойства при любом стиле езды, даже при применении сильных нагрузок.</p>
+            <h4 class="prr">Цена:</h4> <span class="wicartprice" id="wicartprice_010">2100</span> Руб.
+            <button id="wicartbutton_010" onclick="cart.addToCart(this, '010', priceList['010'])">Купить</button>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="shop">
+            <h3>Лукойл 10W-40 4л.</h3>
+            <img src="images/lukoil.jpg">
+            <p>Моторные масла ЛУКОЙЛ СТАНДАРТ
+применяются в двигателях различного типа 
+легковых автомобилей и легких грузовиков. Они особо хорошо себя зареко-
+мендовали для двигателей с большим 
+пробегом, для которых характерен повышен-
+ный расход масла. </p>
+<h4 class="prr">Цена:</h4> <span class="wicartprice" id="wicartprice_011">1950</span> Руб.
+<button id="wicartbutton_011" onclick="cart.addToCart(this, '011', priceList['011'])">Купить</button>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="shop">
+            <h3>Mobil 1 OW-40 4л.</h3>
+            <img src="images/mobil.jpg">
+            <p>Полностью синтетическое моторное масло Mobil 1™ 0W-40  разработано для новейших бензиновых и дизельных двигателей (без дизельных сажевых фильтров) и демонстрирует отличные эксплуатационные свойства. Оно обеспечивает исключительную эффективность очистки, защиты от износа и другие важные эксплуатационные качества. </p>
+            <h4 class="prr">Цена:</h4> <span class="wicartprice" id="wicartprice_012">2410</span> Руб.
+            <button id="wicartbutton_012" onclick="cart.addToCart(this, '012', priceList['012'])">Купить</button>
+          </div>
+        </div>
+
+
+
+
+
+        <div id="order" class="popup">
+<a href="#" onclick="cart.closeWindow('order', 0)" style="float:right">[закрыть]</a>
+<h4>Введите ваши контактные данные</h4>
+
+<form id="formToSend">
+<input id="fio" type="text" placeholder="Ваши фамилия и имя"  class="" />
+<input id="city" type="text" placeholder="Город"  class="text-input"/>
+<input id="phone" type="text" placeholder="Контактный телефон" class="text-input"/>
+<input id="email" type="text" placeholder="Электронная почта" class="" />
+<br>
+<textarea id="question" placeholder="Адрес"></textarea> <br>
+</form>
+<button onclick="cart.sendOrder('formToSend,overflw,bsum');">Далее</button>
+</div>
+      </div>
+    </div>
+    </div>
+    
+</div>
+</div>
+</div>
+
+
+
+
+
+ <footer>
+    <div class="container">
+       <ul class="nav navbar-nav">
+            <li><a href="index.html">главная </a></li>
+            <li class="active-link"><a href="shop.html">магазин</a></li>
+            <li><a href="#">о нас</a></li>
+            <li><a href="#">контакты</a></li>
+      </ul>
+      <ul class="cont">
+        <h4>Контакты:</h4>
+        <li>Адрес: 443016, г.Самара, ул. Ново-Вокзальная, 88 "Б"</li>
+        <li>тел.: 266-23-80</li>
+        <li>Тонировка: 8-927-72-60-858</li>
+        <li>e-mail:Avtoritet-samara@mail.ru</li>
+      </ul>
+      
+    </div>
+  </footer>
+
+
+  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <!-- Include all compiled plugins (below), or include individual files as needed -->
+  <script src="js/bootstrap.min.js"></script>
+</body>
+</html>
